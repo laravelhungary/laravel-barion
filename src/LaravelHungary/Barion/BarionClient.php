@@ -41,8 +41,8 @@ class BarionClient
         $posKey,
         $associative = false
     ) {
-        $this->endpoint = $endpoint;
         $this->client = $client;
+        $this->endpoint = $endpoint;
         $this->posKey = $posKey;
         $this->associative = $associative;
     }
