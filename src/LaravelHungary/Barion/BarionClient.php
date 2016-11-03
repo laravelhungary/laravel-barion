@@ -24,7 +24,7 @@ class BarionClient
     /**
      * @var bool
      */
-    private $assoc;
+    private $associative;
 
     /**
      * BarionClient constructor. Initializes an instance
@@ -33,18 +33,18 @@ class BarionClient
      * @param Client $client
      * @param string $endpoint
      * @param string $posKey
-     * @param bool $assoc
+     * @param bool $associative
      */
     public function __construct(
         Client $client,
         $endpoint,
         $posKey,
-        $assoc = false
+        $associative = false
     ) {
         $this->endpoint = $endpoint;
         $this->client = $client;
         $this->posKey = $posKey;
-        $this->assoc = $assoc;
+        $this->associative = $associative;
     }
 
     /**
@@ -61,7 +61,7 @@ class BarionClient
 
         $response = $this->client->get($url);
 
-        return json_decode((string) $response->getBody(), $this->assoc);
+        return json_decode((string) $response->getBody(), $this->associative);
     }
 
     /**
@@ -83,7 +83,7 @@ class BarionClient
             'json' => $data
         ]);
 
-        return json_decode((string) $response->getBody(), $this->assoc);
+        return json_decode((string) $response->getBody(), $this->associative);
     }
 
     /**
