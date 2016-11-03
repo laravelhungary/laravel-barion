@@ -1,8 +1,4 @@
 <?php
-/**
- * (c) 2016. 11. 03..
- * Authors: nxu
- */
 
 namespace LaravelHungary\Barion;
 
