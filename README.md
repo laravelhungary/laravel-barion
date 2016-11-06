@@ -15,11 +15,15 @@ Under the hood there is just a thin wrapper to make API calls simple.
 
 2. Register the service provider in the `app.php` config file
 
-`LaravelHungary\Barion\BarionServiceProvider::class,`
+```php
+LaravelHungary\Barion\BarionServiceProvider::class,
+```
 
 3. Register the Barion facade (optional)
 
-`'Barion' =>  LaravelHungary\Barion\BarionFacade::class`
+```php
+'Barion' =>  LaravelHungary\Barion\BarionFacade::class
+```
 
 ## Configuration
 
@@ -40,7 +44,9 @@ dependency injection, or simply use the provided Facade.
 There are two convenience methods for the two most-often used API calls:
 
 #### Get the payment status
-`Barion::getPaymentState('my-payment-id')`
+```php
+Barion::getPaymentState('my-payment-id')
+```
 
 #### Start a Payment
 ```php
@@ -72,9 +78,13 @@ Barion::paymentStart([
 
 All other API calls are accessible using either `get` or `post`:
 
-`Barion::get('/api/url')`
+```php
+Barion::get('/api/url')
+```
 
-`Barion::post('/api/url', ['my-data' => 'some value'])`
+```php
+Barion::post('/api/url', ['my-data' => 'some value'])
+```
 
 POS Key is automatically appended to each request.
 
