@@ -1,6 +1,7 @@
 {
   "name": "laravelhungary/laravel-barion",
   "description": "Simple Laravel wrapper for the API of the Barion online payment system",
+  "license": "MIT",
   "authors": [
     {
       "name": "Zsolt Fekete (nxu)",
