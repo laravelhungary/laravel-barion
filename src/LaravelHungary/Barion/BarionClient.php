@@ -48,8 +48,8 @@ class BarionClient
     }
 
     /**
-     * Performs a GET request to a given URL and returns the response JSON as
-     * string. The base URI of the endpoint gets prepended automatically.
+     * Performs a GET request to a given URL and returns the response.
+     * The base URI of the endpoint gets prepended automatically.
      *
      * @param string $url
      * @return array|mixed
@@ -65,8 +65,8 @@ class BarionClient
     }
 
     /**
-     * Performs a POST request to a given URL and returns the response JSON as
-     * string. The base URI of the endpoint gets prepended automatically.
+     * Performs a POST request to a given URL and returns the response.
+     * The base URI of the endpoint gets prepended automatically.
      *
      * @param string $url
      * @param array $data
