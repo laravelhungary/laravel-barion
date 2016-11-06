@@ -23,7 +23,7 @@ class BarionServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $vendorConfigPath = __DIR__.'../../../resources/config/laravel-barion.php';
+        $vendorConfigPath = __DIR__.'/../../../resources/config/laravel-barion.php';
 
         $this->mergeConfigFrom($vendorConfigPath, 'laravel-barion');
 
