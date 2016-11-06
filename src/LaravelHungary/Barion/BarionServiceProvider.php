@@ -11,7 +11,7 @@ class BarionServiceProvider extends ServiceProvider
     protected $defer = true;
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function provides()
     {
@@ -23,12 +23,12 @@ class BarionServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $vendorConfigPath = __DIR__ . '../../../resources/config/laravel-barion.php';
+        $vendorConfigPath = __DIR__.'../../../resources/config/laravel-barion.php';
 
         $this->mergeConfigFrom($vendorConfigPath, 'laravel-barion');
 
         $this->publishes([
-            $vendorConfigPath => config_path('laravel-barion.php')
+            $vendorConfigPath => config_path('laravel-barion.php'),
         ]);
     }
 
@@ -39,9 +39,9 @@ class BarionServiceProvider extends ServiceProvider
     {
         $this->app->bind(Barion::class, function () {
             return new Barion(
-                new Client,
+                new Client(),
                 $this->getEndpoint(),
-                config("laravel-barion.pos_key"),
+                config('laravel-barion.pos_key'),
                 config('laravel-barion.associative')
             );
         });

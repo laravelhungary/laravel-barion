@@ -19,17 +19,17 @@ class BarionClientTest extends PHPUnit_Framework_TestCase
             $history
         );
 
-        $request->get("/test/url");
+        $request->get('/test/url');
         $uri = $history[0]['request']->getUri();
         $this->assertEquals(
-            "https://api.test.barion.com/test/url?POSKey=abcd-1234",
+            'https://api.test.barion.com/test/url?POSKey=abcd-1234',
             (string) $uri
         );
 
-        $request->get("/test/url?myparam=false");
+        $request->get('/test/url?myparam=false');
         $uri = $history[1]['request']->getUri();
         $this->assertEquals(
-            "https://api.test.barion.com/test/url?myparam=false&POSKey=abcd-1234",
+            'https://api.test.barion.com/test/url?myparam=false&POSKey=abcd-1234',
             (string) $uri
         );
     }
@@ -40,19 +40,19 @@ class BarionClientTest extends PHPUnit_Framework_TestCase
         $history = [];
         $request = $this->getClientObject([], $history);
 
-        $request->post("/pay", ["currency" => 'HUF', 'amount' => 100]);
+        $request->post('/pay', ["currency" => 'HUF', 'amount' => 100]);
 
         $body = (string) $history[0]['request']->getBody();
         $data = json_decode($body);
 
-        $this->assertEquals($data->POSKey, "abcd-1234");
+        $this->assertEquals($data->POSKey, 'abcd-1234');
     }
 
     private function getClientObject($responses = [], &$history = [])
     {
         $historyMiddleware = Middleware::history($history);
 
-        if (! $responses) {
+        if (!$responses) {
             $responses = [new Response(200)];
         }
 
@@ -63,7 +63,7 @@ class BarionClientTest extends PHPUnit_Framework_TestCase
         return new BarionClient(
             new Client(['handler' => $handler]),
             BarionEndpoint::TEST,
-            "abcd-1234"
+            'abcd-1234'
         );
     }
 }

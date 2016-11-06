@@ -27,13 +27,12 @@ class BarionClient
     private $associative;
 
     /**
-     * BarionClient constructor. Initializes an instance
-     * of the BarionClient class.
+     * Initializes an instance of the BarionClient class.
      *
      * @param Client $client
      * @param string $endpoint
      * @param string $posKey
-     * @param bool $associative
+     * @param bool   $associative
      */
     public function __construct(
         Client $client,
@@ -52,6 +51,7 @@ class BarionClient
      * The base URI of the endpoint gets prepended automatically.
      *
      * @param string $url
+     *
      * @return array|mixed
      */
     public function get($url)
@@ -69,7 +69,8 @@ class BarionClient
      * The base URI of the endpoint gets prepended automatically.
      *
      * @param string $url
-     * @param array $data
+     * @param array  $data
+     *
      * @return array|mixed
      */
     public function post($url, $data)
@@ -77,7 +78,7 @@ class BarionClient
         $url = $this->getEndpointUrl($url);
 
         // Add POS key to the post data
-        $data["POSKey"] = $this->posKey;
+        $data['POSKey'] = $this->posKey;
 
         $response = $this->client->post($url, [
             'json' => $data
@@ -90,22 +91,24 @@ class BarionClient
      * Gets the full URL of the request including the endpoint base URI.
      *
      * @param string $url
+     *
      * @return string
      */
     protected function getEndpointUrl($url)
     {
-        return $this->endpoint . ltrim($url, "/");
+        return $this->endpoint.ltrim($url, "/");
     }
 
     /**
      * Appends the POS key to the given request path.
      *
      * @param string $path
+     *
      * @return string
      */
     protected function appendPosKey($path)
     {
-        if (strpos($path, "?") === false) {
+        if (strpos($path, '?') === false) {
             return "$path?POSKey={$this->posKey}";
         }
 

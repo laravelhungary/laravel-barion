@@ -8,17 +8,19 @@ class Barion extends BarionClient
      * Initializes a payment by sending a payment start request.
      *
      * @param array $data
+     *
      * @return array|mixed
      */
     public function paymentStart($data)
     {
-        return $this->post("/v2/Payment/Start", $data);
+        return $this->post('/v2/Payment/Start', $data);
     }
 
     /**
      * Gets the status of the payment.
      *
      * @param string $paymentId
+     *
      * @return array|mixed
      */
     public function getPaymentState($paymentId)
