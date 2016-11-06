@@ -1,4 +1,4 @@
-# Use the Barion API from Laravel
+# Use the Barion API with Laravel
 
 [![SensioLabs Insight](https://img.shields.io/sensiolabs/i/ec36151c-e892-46f4-9101-f83900bf3af2.svg?style=flat-square)](https://insight.sensiolabs.com/projects/ec36151c-e892-46f4-9101-f83900bf3af2)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](https://opensource.org/licenses/MIT)
