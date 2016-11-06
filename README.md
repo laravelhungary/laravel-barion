@@ -32,6 +32,11 @@ Laravel-Barion comes preconfigured, you only need to set your POS key in the
  
  `BARION_POS_KEY=<my pos key>`
  
+ The Barion environment defaults to `test.barion.com`. To use the live instead,
+ set 
+ 
+ `BARION_LIVE_ENV=true`.
+ 
  If you'd like to tweak the configuration values, publish 
  the config file:
  
