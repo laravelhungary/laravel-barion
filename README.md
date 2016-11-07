@@ -1,5 +1,6 @@
 # Use the Barion API with Laravel
 
+[![Travis](https://img.shields.io/travis/laravelhungary/laravel-barion.svg?style=flat-square)](https://travis-ci.org/laravelhungary/laravel-barion)
 [![StyleCI](https://styleci.io/repos/72787922/shield?branch=master)](https://styleci.io/analyses/XZoNV6#)
 [![SensioLabs Insight](https://img.shields.io/sensiolabs/i/ec36151c-e892-46f4-9101-f83900bf3af2.svg?style=flat-square)](https://insight.sensiolabs.com/projects/ec36151c-e892-46f4-9101-f83900bf3af2)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](https://opensource.org/licenses/MIT)
