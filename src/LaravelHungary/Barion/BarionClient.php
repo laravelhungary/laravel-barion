@@ -81,7 +81,7 @@ class BarionClient
         $data['POSKey'] = $this->posKey;
 
         $response = $this->client->post($url, [
-            'json' => $data
+            'json' => $data,
         ]);
 
         return json_decode((string) $response->getBody(), $this->associative);
@@ -96,7 +96,7 @@ class BarionClient
      */
     protected function getEndpointUrl($url)
     {
-        return $this->endpoint.ltrim($url, "/");
+        return $this->endpoint.ltrim($url, '/');
     }
 
     /**

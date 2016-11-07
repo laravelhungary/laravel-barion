@@ -40,7 +40,7 @@ class BarionClientTest extends PHPUnit_Framework_TestCase
         $history = [];
         $request = $this->getClientObject([], $history);
 
-        $request->post('/pay', ["currency" => 'HUF', 'amount' => 100]);
+        $request->post('/pay', ['currency' => 'HUF', 'amount' => 100]);
 
         $body = (string) $history[0]['request']->getBody();
         $data = json_decode($body);
