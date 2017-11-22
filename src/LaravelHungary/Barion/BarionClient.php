@@ -114,4 +114,28 @@ class BarionClient
 
         return "$path&POSKey={$this->posKey}";
     }
+
+    /**
+     * Return the current POS Key.
+     *
+     * @return string
+     */
+    public function getPosKey()
+    {
+        return $this->posKey;
+    }
+
+    /**
+     * Set the current POS key.
+     *
+     * @param string $posKey
+     *
+     * @return BarionClient
+     */
+    public function setPosKey($posKey)
+    {
+        $this->posKey = $posKey;
+
+        return $this;
+    }
 }
