@@ -116,7 +116,7 @@ class BarionClient
     }
 
     /**
-     * Return the current POS Key
+     * Return the current POS Key.
      *
      * @return string
      */
@@ -126,7 +126,7 @@ class BarionClient
     }
 
     /**
-     * Set the current POS key
+     * Set the current POS key.
      *
      * @param string $posKey
      *
