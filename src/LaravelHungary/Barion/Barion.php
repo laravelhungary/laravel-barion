@@ -27,4 +27,16 @@ class Barion extends BarionClient
     {
         return $this->get("/v2/Payment/GetPaymentState?PaymentId=$paymentId");
     }
+
+    /**
+     * Make call with different POS key.
+     *
+     * @param $key
+     *
+     * @return static
+     */
+    public function withPOSKey($key)
+    {
+        return $this->setPosKey($key);
+    }
 }

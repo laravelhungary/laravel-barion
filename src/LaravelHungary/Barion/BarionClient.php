@@ -130,7 +130,7 @@ class BarionClient
      *
      * @param string $posKey
      *
-     * @return BarionClient
+     * @return static
      */
     public function setPosKey($posKey)
     {
