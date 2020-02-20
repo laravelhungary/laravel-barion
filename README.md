@@ -5,6 +5,7 @@
 [![SensioLabs Insight](https://img.shields.io/sensiolabs/i/ec36151c-e892-46f4-9101-f83900bf3af2.svg?style=flat-square)](https://insight.sensiolabs.com/projects/ec36151c-e892-46f4-9101-f83900bf3af2)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 [![Packagist](https://img.shields.io/packagist/v/laravelhungary/laravel-barion.svg?style=flat-square)](https://packagist.org/packages/laravelhungary/laravel-barion)
+[![Total Downloads](https://img.shields.io/packagist/dt/laravelhungary/laravel-barion.svg?style=flat-square)](https://packagist.org/packages/laravelhungary/laravel-barion)
 
 Laravel-Barion is provides an easy way to use the Barion API with Laravel applications.
 Under the hood there is just a thin wrapper to make API calls simple.
