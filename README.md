@@ -16,6 +16,8 @@ Under the hood there is just a thin wrapper to make API calls simple.
 
 `composer require laravelhungary/laravel-barion`
 
+**If you're using Laravel 5.5, you're done, the following steps are being done automatically.**
+
 2. Register the service provider in the `app.php` config file
 
 ```php
